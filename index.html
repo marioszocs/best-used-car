@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autófelvásárlás 0-24 | Gyors ajánlat</title>
+    <meta
+      name="description"
+      content="Használt autó felvásárlás országosan. Küldje el autója adatait képekkel, és rövid időn belül ajánlatot adunk."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__tag">Autófelvásárlás 0-24 • Országosan</p>
+        <h1>Eladná autóját gyorsan és stressz nélkül?</h1>
+        <p class="hero__lead">
+          Sérült, törött, lejárt műszakis vagy hibás autót is megveszünk.
+          Töltse ki az űrlapot, küldjön képeket, és rövid időn belül visszahívjuk.
+        </p>
+
+        <ul class="hero__badges" role="list">
+          <li>Azonnali ajánlat</li>
+          <li>Készpénzes fizetés</li>
+          <li>Ingyenes kiszállás</li>
+        </ul>
+
+        <a class="hero__cta" href="#ajanlat-urlap">Ajánlatkérés most</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section trust">
+        <div class="container trust__grid">
+          <article class="trust__card">
+            <h2>Miért minket válasszon?</h2>
+            <p>
+              Nem kell hirdetnie, alkudoznia vagy hetekig várnia. Mi gyorsan,
+              átláthatóan és korrekt áron vásároljuk fel autóját.
+            </p>
+          </article>
+          <article class="trust__card">
+            <h3>Állapottól függetlenül</h3>
+            <p>
+              Lejárt műszaki, motorhiba, sérült karosszéria vagy nem induló autó
+              sem akadály.
+            </p>
+          </article>
+          <article class="trust__card">
+            <h3>Egyszerű folyamat</h3>
+            <p>
+              1. Űrlap kitöltése • 2. Visszahívás • 3. Helyszíni megtekintés • 4.
+              Gyors adásvétel.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section form-section" id="ajanlat-urlap">
+        <div class="container form-wrap">
+          <div class="form-intro">
+            <p class="form-intro__label">Ingyenes ajánlatkérés</p>
+            <h2>Küldje el autója adatait és képeit</h2>
+            <p>
+              Töltse ki az alábbi mezőket. A beküldött adatokat formázott
+              üzenetként e-mailben kapja meg.
+            </p>
+          </div>
+
+          <form
+            id="car-form"
+            class="car-form"
+            action="https://formsubmit.co/pelda.email@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <input type="hidden" name="_subject" value="Új autófelvásárlási ajánlatkérés" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="Bekuldve" id="bekuldve-datum" />
+
+            <div class="field-group">
+              <label for="nev">Név *</label>
+              <input id="nev" name="Név" type="text" required placeholder="Pl.: Kovács Péter" />
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="telefon">Telefonszám *</label>
+                <input
+                  id="telefon"
+                  name="Telefonszám"
+                  type="tel"
+                  required
+                  placeholder="Pl.: +36 30 123 4567"
+                />
+              </div>
+              <div class="field-group">
+                <label for="email">E-mail cím</label>
+                <input
+                  id="email"
+                  name="Email"
+                  type="email"
+                  placeholder="nev@pelda.hu"
+                />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="marka">Autó márka *</label>
+                <input id="marka" name="Márka" type="text" required placeholder="Pl.: Volkswagen" />
+              </div>
+              <div class="field-group">
+                <label for="tipus">Autó típus *</label>
+                <input id="tipus" name="Típus" type="text" required placeholder="Pl.: Golf" />
+              </div>
+            </div>
+
+            <div class="field-row field-row--triple">
+              <div class="field-group">
+                <label for="evjarat">Évjárat *</label>
+                <input id="evjarat" name="Évjárat" type="number" min="1950" max="2035" required />
+              </div>
+              <div class="field-group">
+                <label for="uzemanyag">Üzemanyag</label>
+                <select id="uzemanyag" name="Üzemanyag">
+                  <option value="">Válasszon</option>
+                  <option>Benzin</option>
+                  <option>Dízel</option>
+                  <option>Hibrid</option>
+                  <option>Elektromos</option>
+                  <option>LPG</option>
+                  <option>Egyéb</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="futott">Kilométeróra állás</label>
+                <input id="futott" name="Kilométeróra" type="number" min="0" placeholder="Pl.: 186000" />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="allapot">Állapot röviden *</label>
+                <input
+                  id="allapot"
+                  name="Állapot"
+                  type="text"
+                  required
+                  placeholder="Pl.: motorhibás, de gurulóképes"
+                />
+              </div>
+              <div class="field-group">
+                <label for="hely">Helyszín *</label>
+                <input id="hely" name="Helyszín" type="text" required placeholder="Pl.: Székesfehérvár" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="leiras">Részletes leírás *</label>
+              <textarea
+                id="leiras"
+                name="Leírás"
+                rows="5"
+                required
+                placeholder="Írja le röviden az autó állapotát, ismert hibáit, sérüléseit, és hogy mikor megtekinthető."
+              ></textarea>
+            </div>
+
+            <div class="field-group">
+              <label for="kepek">Autó képei (több fájl feltöltése engedélyezett)</label>
+              <input
+                id="kepek"
+                name="Autó képek"
+                type="file"
+                accept="image/*"
+                multiple
+              />
+              <small class="hint">Javasolt: minimum 3 kép (eleje, hátulja, belső tér).</small>
+            </div>
+
+            <div class="checkbox-wrap">
+              <input id="adatkezeles" name="Adatkezelés elfogadva" type="checkbox" required />
+              <label for="adatkezeles"
+                >Elfogadom, hogy az adataimat kapcsolatfelvétel és ajánlatadás céljából kezeljék. *</label
+              >
+            </div>
+
+            <button type="submit" class="btn-submit">Ajánlatkérés elküldése</button>
+            <p class="form-footnote">
+              Kattintás után az adatok e-mailben továbbításra kerülnek a megadott címre.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>Autófelvásárlás 0-24 • Gyors, korrekt, országos</p>
+        <a href="tel:+36301234567">Hívás: +36 30 123 4567</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
