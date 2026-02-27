@@ -1,4 +1,6 @@
-const revealTargets = document.querySelectorAll('.trust__card, .form-intro, .car-form, .hero__content > *');
+const revealTargets = document.querySelectorAll(
+  '.trust__card, .logistics__header, .logistics__card, .logistics__cta, .form-intro, .car-form, .hero__content > *'
+);
 
 for (const el of revealTargets) {
   el.classList.add('reveal');
